@@ -1,0 +1,373 @@
+@import url("../fonts/fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+/*================CABEÇALHO==================*/
+header{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(225, 6, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    & .header-container{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5px 0px 5px 0px;
+        gap: 120px;
+
+        /*fia*/
+        & .fia-logo{
+            width:120px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+
+            & img{
+                width: 70px;
+                height: 50px;
+            }
+        }
+        /*title*/
+        & .header-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            & p{
+                font-size: 35px;
+                font-family: devotee;
+                color: white;
+            }
+        }
+        /*f1*/
+        & .f1-logo{
+            width:120px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img{
+                width: 100px;
+                height: 60px;
+            }
+        }
+    }
+}
+
+/*==================CONTEUDO=================*/
+
+
+
+
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    background-color: #ebebeb;
+
+    & .main-container{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 1000px;
+        height: 100%;
+        padding: 40px;
+
+        /*======================SEASON================*/
+        & .season{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            & .title-season{
+                width: 100%;
+                height:120px;
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.164);
+
+                & p{
+                    width: 600px;
+                    font-family: f1;
+                    font-size: 40px;
+                    word-wrap: break-word;
+                }
+            }
+
+            & .tb-season-container{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+                & .tb-menu{
+                    width: 100%;
+                    height: 50px;
+                    padding: 10px 10px 10px 50px;
+                    display: flex;
+                    gap: 10px;
+
+                    & button{
+                        border: none;
+                        font-family:f1;
+                        font-size: 15px;
+                        background-color: rgba(255, 255, 255, 0);
+                        cursor: pointer;
+                    }
+
+                    & button:hover{
+                        opacity: 60%;
+                    }
+
+
+                }
+
+                & .tb-drivers{
+                    width: 90%;
+
+                    & table{
+                        width: 100%;
+                        border-collapse:collapse;
+                        font-family: Titillium Web;
+
+                        & .tb-header{
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+                            text-align: left;
+                            
+                            & th{
+                                padding-left: 10px;
+                            }
+                        }
+
+                        & tr,td{
+                            height: 50px;
+                            padding: 10px;
+                            font-size: 15px;
+                        }
+
+                        & .color-line{
+                            background-color: rgb(255, 228, 228);
+                        }
+                    }
+                }
+
+                & .tb-teams{
+                    width: 90%;
+
+                    & table{
+                        width: 100%;
+                        border-collapse:collapse;
+                        font-family: Titillium Web;
+
+                        & .tb-header{
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+                            text-align: left;
+                            
+                            & th{
+                                padding-left: 10px;
+                            }
+                        }
+
+                        & tr,td{
+                            height: 50px;
+                            padding: 10px;
+                            font-size: 15px;
+                        }
+
+                        & .color-line{
+                            background-color: rgb(252, 220, 220);
+                        }
+                    }
+                }
+
+                & #tb1 {
+                    display: block;
+                }
+              
+                & #tb2 {
+                    display: none;
+                }
+            
+                & .ativo {
+                    color: rgb(226, 0, 0);
+                    font-weight: 600;
+                    transition-delay:0.2s ;
+                }
+            }
+        }
+
+        /*======================GRAND PRIX================*/
+        & .grand-prix{
+            width: 100%;
+            height: 500px;
+
+            & .gp-title{
+                width: 100%;
+                height:120px;
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.164);
+
+                & p{
+                    width: 600px;
+                    font-family: f1;
+                    font-size: 40px;
+                    word-wrap: break-word;
+                }
+            }
+
+            & .gp-container{
+                display: flex;
+                justify-content: space-around;
+                padding: 40px;
+
+                a{
+                    text-decoration: none;
+                }
+
+                & .gp{
+                    width: 180px;
+                    height: 250px;
+                    background-color: rgb(255, 51, 51);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: f1;
+                    font-size: 25px;
+                    color: rgb(255, 0, 0);
+                    background-image: url("https://http2.mlstatic.com/D_NQ_NP_835586-MLB43954223135_102020-O-bandeira-brilhante-quadriculada-corrida-chegada-145m-x-10m.webp");
+                }
+            }
+        }
+
+        & .points-system{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & .pts-title{
+                width: 100%;
+                height:120px;
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.164);
+
+                & p{
+                    width: 600px;
+                    font-family: f1;
+                    font-size: 40px;
+                    word-wrap: break-word;
+                }
+            }
+
+            & .tb-points-system{
+                width: 90%;
+
+                & table{
+                    width: 100%;
+                    border-collapse:collapse;
+                    font-family: Titillium Web;
+
+                    & .tb-header{
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+                        text-align: left;
+                        
+                        & th{
+                            padding-left: 10px;
+                        }
+                    }
+
+                    & tr,td{
+                        height: 50px;
+                        padding: 10px;
+                        font-size: 15px;
+                    }
+
+                    & .color-line{
+                        background-color: rgb(255, 228, 228);
+                    }
+                }
+            }
+        }
+
+        & .drivers-list{
+            width: 100%;
+            display: flex;
+            justify-content: center;    
+
+            & .list-title{
+                width: 100%;
+                height:120px;
+                display: flex;
+                align-items: center;
+                padding: 20px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.164);
+
+                & p{
+                    width: 600px;
+                    font-family: f1;
+                    font-size: 40px;
+                    word-wrap: break-word;
+                }
+            }
+
+            & .tb-pilots{
+                width: 90%;
+
+                & table{
+                    width: 100%;
+                    border-collapse:collapse;
+                    font-family: Titillium Web;
+
+                    & .tb-header{
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+                        text-align: left;
+                        
+                        & th{
+                            padding-left: 10px;
+                        }
+                    }
+
+                    & tr,td{
+                        height: 50px;
+                        padding: 10px;
+                        font-size: 15px;
+                    }
+
+                    & .color-line{
+                        background-color: rgb(255, 228, 228);
+                    }
+                }
+            }
+
+        }
+    }   
+}
