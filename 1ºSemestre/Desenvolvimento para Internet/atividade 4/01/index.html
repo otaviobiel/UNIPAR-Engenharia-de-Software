@@ -1,0 +1,797 @@
+<!--01. Baseado nos horários das disciplinas, crie uma página html utilizado o table para exibir os horários e disciplinas do curso.
+===============================================================================================================================-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+    <title>Tabela de Horários</title>
+</head>
+<body>
+
+    <header>
+        <img src="./logo.png" width="140px" height="140px">
+        <div class="info-container">
+            <p class="txt-info" id="info1"><i>UNIVERSIDADE PARANAENSE - UNIPAR</i></p>
+            <p class="txt-info" id="info2">RECONHECIDA PELA PORTARIA - MEC Nº1580, DE 09/11/93 - D.O.U. 10/11/93</p>
+            <p class="txt-info" id="info3">MANTENEDORA: UNIPAR - SOCIEDADE EMPRESARIAL LTDA</p>
+            <br>
+            <p class="txt-info" id="info4"><i>UMUARAMA - TOLEDO - GUAÍRA - PARANAVAÍ - CIANORTE - CASCAVEL - FRANCISCO BELTRÃO</i></p>
+        </div>
+    </header>
+
+    <main>
+        <section class="title-container">
+            <div class="title">
+                <p><u>HORÁRIO DE AULA DO CURSO DE ENGENHARIA DE SOFTWARE 2025/1 - CASCAVEL</u></p>
+            </div>
+            <div class="subtitle">
+                <p>1º (ingressantes fevereiro - 25)</p>
+            </div>
+        </section>
+        
+        <section>
+            <table>
+                <!--====================colunas====================-->
+                <tr>
+                    <td class="categoria-null"></td>
+                    <td class="categoria" width="20px">Horário Inicial</td>
+                    <td class="categoria" width="20px">Horário Final</td>
+                    <td class="categoria" width="20px">Código Disc. Lyceum</td>
+                    <td class="categoria">Disciplinas</td>
+                    <td class="categoria" width="80px">Teórica / Prática</td>
+                    <td class="categoria" width="90px">Semanal / Quinzenal</td>
+                    <td class="categoria" width="15px">Mat.</td>
+                    <td class="categoria" width="250px">Professor</td>
+                    <td class="categoria" width="100px">Sala ou Laboratório</td>
+                </tr>
+
+                <!--====================SEGUNDA====================-->
+                <tr>
+                    <td class="dia">Segunda Feira</td>
+
+                    <!--HORARIO INICIAL-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--HORARIO FINAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--CODIGO DISC LYCEUM-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--DISCIPLINA-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--TEÓRICA - PRÁTICA-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SEMANAL - QUINZENAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--MAT-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--PROFESSOR-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SALA OU LAB-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--====================TERÇA====================-->
+                <tr>
+                    <td class="dia">Terça Feira</td>
+                    <!--HORARIO INICIAL-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--HORARIO FINAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--CODIGO DISC LYCEUM-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--DISCIPLINA-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--TEÓRICA - PRÁTICA-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SEMANAL - QUINZENAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--MAT-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--PROFESSOR-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SALA OU LAB-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--====================QUARTA====================-->
+                <tr>
+                    <td class="dia">Quarta Feira</td>
+                    <!--HORARIO INICIAL-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--HORARIO FINAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--CODIGO DISC LYCEUM-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--DISCIPLINA-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--TEÓRICA - PRÁTICA-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SEMANAL - QUINZENAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--MAT-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--PROFESSOR-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SALA OU LAB-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--====================QUINTA====================-->
+                <tr>
+                    <td class="dia">Quinta Feira</td>
+                    <!--HORARIO INICIAL-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--HORARIO FINAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--CODIGO DISC LYCEUM-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--DISCIPLINA-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--TEÓRICA - PRÁTICA-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SEMANAL - QUINZENAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--MAT-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--PROFESSOR-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SALA OU LAB-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--====================SEXTA====================-->
+                <tr>
+                    <td class="dia">Segunda Feira</td>
+                    <!--HORARIO INICIAL-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--HORARIO FINAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--CODIGO DISC LYCEUM-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--DISCIPLINA-->
+                    <td>
+                        <div class="dados">
+                            <div class="parte1">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                            <div class="parte2">
+                                <p>19:10</p>
+                                <p>20:10</p>
+                            </div>
+                        </div>
+                    </td>
+
+                    <!--TEÓRICA - PRÁTICA-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SEMANAL - QUINZENAL-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--MAT-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--PROFESSOR-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+
+                    <!--SALA OU LAB-->
+                    <td>
+                        <div class="dados">
+                            <p class="parte1">
+                                19:10
+                                20:10
+                                19:10
+                                20:00
+                            </p>
+                            <p class="parte2">
+                                21:00
+                                21:50
+                            </p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>

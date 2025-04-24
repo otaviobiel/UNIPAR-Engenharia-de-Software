@@ -1,0 +1,49 @@
+/*CONFIGS*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*CABEÇALHO*/
+header{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+/*CONTEUDO*/
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    & .content-container{
+        width: 100%;
+        height: 1000px;
+        margin-inline: 200px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgb(230, 230, 230);
+        padding: 20px;
+        gap: 50px;
+    }
+}
+
+    /*descrição*/
+
+    .desc-container{
+        width: 100%;
+        height: 400px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        -webkit-box-shadow: 60px 60px 127px -4px rgba(0,0,0,0.5);
+    }
+
+/*FONT-FACE*/
