@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+@font-face {
+    font-family: digital;
+    src: url("./PressStart2P-Regular.ttf");
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.system{
+    background-color: gray;
+    width: 60%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    .display{
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        height:100%;
+
+        .title-display{
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 40px;
+            text-align: center;
+            padding: 10px;
+            font-family: digital;
+        }
+
+        .displayScreen{
+            font-family: digital;
+        }
+    }
+}
+

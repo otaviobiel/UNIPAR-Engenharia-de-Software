@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Simples - Jogo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: sans-serif;
+      background-color: #222;
+      overflow: hidden;
+    }
+    #gameContainer {
+      position: relative;
+      width: 960px;
+      height: 600px;
+      margin: 30px auto;
+    }
+    canvas {
+      display: block;
+      background-color: #111;
+      border: 2px solid #fff;
+    }
+    .hud {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 5px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+    .menu-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      background: rgba(0,0,0,0.5);
+      border: 1px solid white;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 12px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameContainer">
+    <canvas id="gameCanvas" width="960" height="600"></canvas>
+    <div class="hud" id="hud">Fase: 1 | Pontuação: 0 | Tempo: 0s</div>
+    <div class="menu-button" onclick="toggleTheme()">Tema</div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+    let theme = "dark";
+
+    function toggleTheme() {
+      theme = theme === "dark" ? "light" : "dark";
+      document.body.style.backgroundColor = theme === "dark" ? "#222" : "#eee";
+      canvas.style.backgroundColor = theme === "dark" ? "#111" : "#fff";
+    }
+
+    const player = { x: 50, y: 50, size: 20, color: "blue", speed: 2, dx: 0, dy: 0 };
+    const goal = { x: 900, y: 550, size: 20, color: "green" };
+
+    const enemies = [];
+    for (let i = 0; i < 15; i++) {
+      enemies.push({
+        x: 100 + Math.random() * 800,
+        y: 100 + Math.random() * 400,
+        size: 20,
+        dx: Math.random() > 0.5 ? 1 : -1,
+        dy: 0,
+        area: { x1: 50, x2: 910 }
+      });
+    }
+
+    const walls = [];
+    for (let i = 0; i < 100; i++) {
+      walls.push({
+        x: Math.floor(Math.random() * 48) * 20,
+        y: Math.floor(Math.random() * 29) * 20,
+        w: 20,
+        h: 20
+      });
+    }
+
+    const keys = [];
+    for (let i = 0; i < 5; i++) {
+      keys.push({
+        x: Math.floor(Math.random() * 45 + 1) * 20,
+        y: Math.floor(Math.random() * 27 + 1) * 20,
+        size: 15,
+        collected: false
+      });
+    }
+
+    function drawMap() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = goal.color;
+      ctx.fillRect(goal.x, goal.y, goal.size, goal.size);
+
+      ctx.fillStyle = "gray";
+      for (const wall of walls) {
+        ctx.fillRect(wall.x, wall.y, wall.w, wall.h);
+      }
+
+      ctx.fillStyle = "gold";
+      for (const k of keys) {
+        if (!k.collected) ctx.fillRect(k.x, k.y, k.size, k.size);
+      }
+
+      ctx.fillStyle = "red";
+      for (const e of enemies) {
+        ctx.fillRect(e.x, e.y, e.size, e.size);
+      }
+
+      ctx.fillStyle = player.color;
+      ctx.beginPath();
+      ctx.arc(player.x, player.y, player.size / 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    function update() {
+      let nextX = player.x + player.dx;
+      let nextY = player.y + player.dy;
+
+      let collision = false;
+      for (const wall of walls) {
+        if (
+          nextX + player.size / 2 > wall.x &&
+          nextX - player.size / 2 < wall.x + wall.w &&
+          nextY + player.size / 2 > wall.y &&
+          nextY - player.size / 2 < wall.y + wall.h
+        ) {
+          collision = true;
+          break;
+        }
+      }
+
+      if (!collision) {
+        player.x = nextX;
+        player.y = nextY;
+      }
+
+      player.x = Math.max(player.size / 2, Math.min(canvas.width - player.size / 2, player.x));
+      player.y = Math.max(player.size / 2, Math.min(canvas.height - player.size / 2, player.y));
+
+      for (const e of enemies) {
+        e.x += e.dx;
+        if (e.x < e.area.x1 || e.x + e.size > e.area.x2) e.dx *= -1;
+      }
+
+      for (const k of keys) {
+        if (!k.collected &&
+          player.x < k.x + k.size &&
+          player.x + player.size > k.x &&
+          player.y < k.y + k.size &&
+          player.y + player.size > k.y) {
+          k.collected = true;
+        }
+      }
+    }
+
+    function gameLoop() {
+      update();
+      drawMap();
+      requestAnimationFrame(gameLoop);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "w") player.dy = -player.speed;
+      if (e.key === "s") player.dy = player.speed;
+      if (e.key === "a") player.dx = -player.speed;
+      if (e.key === "d") player.dx = player.speed;
+    });
+
+    document.addEventListener("keyup", (e) => {
+      if (e.key === "w" || e.key === "s") player.dy = 0;
+      if (e.key === "a" || e.key === "d") player.dx = 0;
+    });
+
+    gameLoop();
+  </script>
+</body>
+</html>
