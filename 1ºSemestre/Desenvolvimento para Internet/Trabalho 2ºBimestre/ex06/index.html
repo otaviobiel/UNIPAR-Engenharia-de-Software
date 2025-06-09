@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Pedido Lanchonete</title>
+    <style>
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap:50px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="content">
+        <div class="cardapio">
+            <table border="1" width="400px">
+                <tr>
+                    <td>Id</td>
+                    <td>Produto</td>
+                    <td>Preço</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Cachorro quente</td>
+                    <td>R$11,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bauru</td>
+                    <td>R$8,50</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Misto quente</td>
+                    <td>8,00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Hamburguer</td>
+                    <td>R$9,00</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Cheese burguer</td>
+                    <td>R$10,00</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Refrigerante</td>
+                    <td>R$4,50</td>
+                </tr>
+            </table>
+        </div>
+        <div class="pedido">
+            <h1>O valor do seu pedido é: R$<span id="txtValor">-</span></h1>
+            <input type="number" id="item" placeholder="Digite o id do produto">
+            <input type="number" id="qtd" placeholder="Digite a quantidade">
+            <button onclick="lanchonete()">Pedir</button>
+        </div>
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>

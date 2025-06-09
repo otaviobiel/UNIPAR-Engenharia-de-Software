@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Sistema de Vendas</title>
+</head>
+<body>
+    <h1>Valor total: R$<span id="txtValor">-</span></h1>
+    <input type="number" placeholder="Digite o preço" id="preco">
+    <select id="pagamento">
+        <option value="1">À vista em dinheiro ou cheque, 10% de desconto</option>
+        <option value="2">À vista no cartão de crédito, 15% de desconto</option>
+        <option value="3">Em duas vezes sem juros, preço normal</option>
+        <option value="4">Em duas vezes, juros de 10%</option>
+    </select>
+    <button onclick="vendas()">Pagar</button>
+    
+</body>
+<script src="script.js"></script>
+</html>

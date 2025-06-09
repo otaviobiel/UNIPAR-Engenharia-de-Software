@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Calculadora IMC</title>
+</head>
+<body>
+    <h1>Seu IMC é <span id="resultado">resultado</span>kg e está na classificação: <span id="clas">*</span></h1>
+    <input type="text" placeholder="informe sua altura" id="altura">
+    <input type="text" placeholder="informe seu peso" id="peso">
+    <button onclick="calcIMC()">Ver</button>
+    <pre>
+        Abaixo de 18.5 → Abaixo do peso
+        18.5 a 24.9 → Peso normal
+        25 a 29.9 → Sobrepeso
+        30 a 34.9 → Obesidade grau 1
+        35 a 39.9 → Obesidade grau 2
+        40+ → Obesidade grau 3.
+    </pre>
+</body>
+<script src="script.js"></script>
+</html>

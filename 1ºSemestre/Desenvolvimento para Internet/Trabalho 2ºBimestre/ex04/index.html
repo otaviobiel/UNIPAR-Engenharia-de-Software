@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - Calculadora de Salário</title>
+</head>
+<body>
+    <input type="text" id="salario" placeholder="Digite o salário atual">
+    <input type="text" list="listCargos" id="cargo" placeholder="Digite o cargo">
+    <datalist id="listCargos">
+        <option>Gerente</option>
+        <option>Engenheiro</option>
+        <option>Técnico</option>
+    </datalist>
+    <button onclick="calcAumento()">Calcular Aumento</button>
+
+    <h1>
+        Salário antigo: R$<span id="salarioAntigo">-</span><br>
+        Salário Novo: R$<span id="novoSalario">-</span><br>
+        Diferença: R$<span id="diferenca">-</span><br>
+        Aumento: <span id="aumento">*</span>
+    </h1>
+
+</body>
+<script src="script.js"></script>
+</html>
